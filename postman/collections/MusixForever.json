@@ -1,0 +1,148 @@
+{
+	"info": {
+		"_postman_id": "2430f686-e735-41b6-a47a-5e06d93ab434",
+		"name": "MusixForever",
+		"description": "# API v1.0\n\nAPI for include music in your application",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_uid": "25507767-2430f686-e735-41b6-a47a-5e06d93ab434"
+	},
+	"item": [
+		{
+			"name": "mp3",
+			"item": [
+				{
+					"name": "trackId",
+					"id": "4d17c0c5-56cd-41d4-9d9b-95068bc55815",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://musixforever.ru/mp3/{{trackID}}",
+							"protocol": "https",
+							"host": [
+								"musixforever",
+								"ru"
+							],
+							"path": [
+								"mp3",
+								"{{trackID}}"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "b6e8a88e-6fb0-4d9e-9b8b-48d7b6165753",
+			"description": "get direct audio link"
+		},
+		{
+			"name": "chart",
+			"id": "320fb29a-e433-4acd-beb1-b8ec7505bfec",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://musixforever.ru/chart",
+					"protocol": "https",
+					"host": [
+						"musixforever",
+						"ru"
+					],
+					"path": [
+						"chart"
+					]
+				},
+				"description": "Get 100 tracks in chart"
+			},
+			"response": []
+		},
+		{
+			"name": "search",
+			"id": "058c8cc5-5c15-4ad5-9784-f6932125546f",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://musixforever.ru/search/{{query}}",
+					"protocol": "https",
+					"host": [
+						"musixforever",
+						"ru"
+					],
+					"path": [
+						"search",
+						"{{query}}"
+					]
+				},
+				"description": "Search track, artists, albums"
+			},
+			"response": []
+		},
+		{
+			"name": "synclyrics",
+			"id": "bac72ef5-41e5-4517-b883-b0aaa248f1e5",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://musixforever.ru/synclyrics/{{trackID}}/ms/{{trackDurationInMS}}",
+					"protocol": "https",
+					"host": [
+						"musixforever",
+						"ru"
+					],
+					"path": [
+						"synclyrics",
+						"{{trackID}}",
+						"ms",
+						"{{trackDurationInMS}}"
+					]
+				},
+				"description": "Get SyncLyrics for track"
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "45c2dd25-a7a9-4bb0-9362-6d98bbf8e633",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "8141c692-5206-49be-a306-230d6538063f",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "f1f98c5e-522c-4a01-885c-60d4964580d7",
+			"key": "host",
+			"value": "https://localhost:3000/",
+			"type": "string"
+		}
+	]
+}
